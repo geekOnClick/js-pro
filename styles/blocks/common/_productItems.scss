@@ -1,0 +1,110 @@
+// Миксины 
+@mixin items-text {
+    h5 {
+        padding-top: 25px;
+        padding-left: 18px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+    }
+    p {
+        max-width: 326px;
+        padding-top: 13px;
+        padding-left: 18px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #5D5D5D;
+    }
+    h4 {
+        padding-top: 18px;
+        padding-left: 18px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #F16D7F;
+    }
+}
+
+//productItems__itemBlocks
+
+.productItems__itemBlocks {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.productItems__itemBlock {
+    margin-top: 30px;
+    width: 360px;
+    background: #F8F8F8;
+    position: relative;
+    
+    @include items-text;
+
+    &img {
+    transition: 1s;
+    }
+}
+
+//hover 
+
+.productItem__hover {
+    max-width: 360px;
+    width: 100%;
+    // width: 360px;
+    height: 420px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transition: 0.6s;
+    background: rgba(58, 56, 56, 0.86);
+    opacity: 0;
+
+}
+.productItems__itemBlock:hover .productItem__hover {
+    opacity: 0.86;
+}
+
+
+//Pre-Tablet
+@media (max-width: 1136px) {
+    .productItems__itemBlocks {
+        justify-content: space-between;
+        max-width: 737px;
+        margin: 0 auto;
+    }
+}
+// Tablet
+
+@media (max-width: 790px) {
+    .productItems__itemBlocks {
+        display: block;
+    }
+    .productItems__itemBlock {
+        max-width: 359px;
+        width: 100%;
+        height: 579px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .productItem__hover {
+        height: 420px;
+    }
+}
+// Mobile
+
+@media (max-width: 488px)  {
+    .productItems {
+        min-width: 488px;
+    }
+}

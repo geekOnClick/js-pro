@@ -1,0 +1,31 @@
+$social-network: #000000;
+$social-network-hover: #ffffff;
+
+.fa-facebook-f {
+    color: $social-network;
+&.fa-facebook-f:hover {
+    color: $social-network-hover;
+    }
+}
+
+.fa-instagram {
+    color: $social-network;
+&.fa-instagram:hover {
+    color: $social-network-hover;
+    }
+}
+
+.fa-pinterest-p {
+    color: $social-network;
+&.fa-pinterest-p:hover {
+    color: $social-network-hover;
+    }
+}
+
+.fa-twitter {
+    color: $social-network;
+
+&.fa-twitter:hover {
+    color: $social-network-hover;
+    }
+}

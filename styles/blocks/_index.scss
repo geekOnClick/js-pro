@@ -1,0 +1,325 @@
+// Миксины
+
+@mixin banner-text {
+    h2 {
+        text-transform: uppercase;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+        color: #222222;
+    }
+    p {
+        text-transform: uppercase;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        color: #222222;
+    }
+    span {
+        color: #F16D7F;
+        font-size: 37px;
+        line-height: 45px;
+    }
+}
+
+@mixin advertisingBlock-text {
+    text-transform: uppercase;
+    p { font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    h3 { padding-top: 5px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #F16D7F;
+    }
+}
+
+@mixin featured-text {
+    h3 {
+        text-align: center;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        color: #222222;
+    }
+     p {
+        padding-top: 6px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+    }
+}
+
+@mixin tablet {
+        h2 {
+        font-size: 44px;
+        line-height: 53px;
+        }
+        p {
+        font-size: 24px;
+        line-height: 29px;
+        }
+        span {
+        font-size: 24px;
+        line-height: 29px;
+        }
+    }
+
+@mixin mobile {
+        h2 {
+        font-size: 38px;
+        line-height: 45px;
+        }
+        p {
+        font-size: 20px;
+        line-height: 24px;
+        }
+        span {
+        font-size: 20px;
+        line-height: 24px;
+        }    
+}
+
+
+// banner
+
+.banner {
+    background-color: #F1E4E6;
+    height: 768px;
+}
+.banner__productImage {
+    display: flex;
+    justify-content: space-between;
+}
+.banner__image {
+    width: 380px;
+    min-height: 764px;
+    background: url(../images/banner-model_cut-photo.png) no-repeat;
+    background-size: contain;
+}
+
+.banner__titleWrap {
+    margin-top: 290px;
+    display: flex;
+    justify-content: flex-end;
+    max-height: 105px;
+    max-width: 424px;
+    width: 100%;
+}
+
+.banner__text {
+    margin-left: 16px;
+    @include banner-text;
+}
+
+// advertisingBlocks
+
+.advertisingBlocks {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+//min-width: 361px;
+.advertisingBlocks__discount {
+    width: 31.6%;
+    min-height: 260px;
+    background: url(../images/discount_bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .advertisingBlocks__offer {
+        width: 100%;
+        margin-top: 105px;
+        @include advertisingBlock-text;
+    }
+}
+
+.advertisingBlocks__hotDeal {
+    width: 31.6%;
+    min-height: 260px;
+    background: url(../images/hot_bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .advertisingBlocks__offer {
+        width: 100%;
+        margin-top: 105px;
+        @include advertisingBlock-text;
+    }
+}
+
+.advertisingBlocks__arrivals {
+    width: 31.6%;
+    min-height: 260px;
+    background: url(../images/arrivals_bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .advertisingBlocks__offer {
+        width: 100%;
+        margin-top: 105px;
+        @include advertisingBlock-text;
+    }
+}
+
+.advertisingBlocks__trendy {
+    margin-top: 30px;
+    width: 100%;
+    min-height: 180px;
+    background: url(../images/accesories_bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .advertisingBlocks__offer {
+        width: 100%;
+        margin-top: 73px;
+        @include advertisingBlock-text;
+    }
+}
+   
+// Featured items
+
+.productItems {
+    margin-top: 96px;
+}
+.productItems__heading {
+    max-width: 336px;
+    margin: 0 auto;
+
+    @include featured-text;
+}
+
+//Banner 855px
+@media (max-width: 855px) {
+    .banner {
+        height: 628px;
+    }
+    .banner__image {
+        min-height: 628px;
+        background-size: contain;
+        background-position: center;
+    }
+    .banner__titleWrap {
+        margin-top: 226px;
+    }
+}
+
+// Tablet
+@media (max-width: 768px)  {
+    @include tablet;
+    .banner {
+        height: 367px;
+    }
+    .banner__image {
+        width: 386px;
+        min-height: 368px;
+        background-position: center;
+    }
+    .banner__titleWrap {
+        margin-top: 138px;
+    }
+    .banner__text {
+        @include tablet;
+    }
+
+    //advertisingBlocks
+    .advertisingBlocks {
+        margin-top: 20px;
+    }
+    
+    .advertisingBlocks__discount, .advertisingBlocks__hotDeal, .advertisingBlocks__arrivals {
+        min-height: 167px;
+
+        & .advertisingBlocks__offer {
+            margin-top: 65px;
+        }
+    }
+    .advertisingBlocks__trendy {
+        margin-top: 20px;
+        min-height: 116px;
+    
+    & .advertisingBlocks__offer {
+        margin-top: 40px;
+    } 
+    }
+
+    // ProductItems
+    .productItems {
+        max-width: 736px;
+    }
+}
+
+// Banner 588px - 488px
+@media (max-width: 588px)  {
+    .banner__productImage {
+        justify-content: start;
+    }
+    .banner__image {
+        width: 183px;
+        background-position: left;
+        display: flex;
+        flex: 1 0 auto;
+    }
+    .banner__titleWrap img {
+        height: 76px;
+    }
+    .banner__text {
+        @include mobile;
+    }
+}
+
+// Mobile 
+@media (max-width: 488px)  {
+    .banner {
+        min-width: 488px;
+    }
+    .banner__image {
+        display: none;
+    }
+    .banner__titleWrap {
+        justify-content: center;
+    }
+    .banner__text {
+        @include mobile;
+    }
+
+    //advertisingBlocks
+    .advertisingBlocks {
+        display: block;
+        min-width: 484px;
+    }
+    .advertisingBlocks__discount, .advertisingBlocks__hotDeal, .advertisingBlocks__arrivals {
+        width: 100%;
+        min-height: 247px;
+        margin-top: 32px;
+
+        & .advertisingBlocks__offer {
+            margin-top: 0;
+            padding-top: 126px;
+        }
+    }
+    .advertisingBlocks__trendy .advertisingBlocks__offer {
+        margin-top: 32px;
+        padding-top: 30px;
+    }
+}
