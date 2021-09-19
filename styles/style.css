@@ -2023,7 +2023,7 @@ details[open] summary ~ * {
   color: #F16D7F;
 }
 
-#closeCart:hover {
+.closeCart:hover {
   cursor: pointer;
 }
 
