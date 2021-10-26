@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>e-shop</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <filter-items></filter-items>
+
+        <button class="cart-button" type="button" @click="cart = !cart">Корзина</button>
+        <cart v-if="cart != false"></cart>
+        
+      </header>
+      <main>
+        <goodslist></goodslist>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="filter.js"></script>
+    <script src="goodslist.js"></script>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

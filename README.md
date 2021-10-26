@@ -1,2 +1,0 @@
-# js-pro
-gb homework
