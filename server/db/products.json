@@ -1,0 +1,8 @@
+[
+    {"id_product": "1", "image": "../images/item1.jpg", "title": "Shirts", "price": 52},
+    {"id_product": "2", "image": "../images/item2.jpg", "title": "Socks", "price": 58},
+    {"id_product": "3", "image": "../images/item3.jpg", "title": "Jacket", "price": 46},
+    {"id_product": "4", "image": "../images/item4.jpg", "title": "Shoes", "price": 89},
+    {"id_product": "5", "image": "../images/item5.jpg", "title": "Trouses", "price": 12},
+    {"id_product": "6", "image": "../images/item6.jpg", "title": "Snickers", "price": 32}
+  ]

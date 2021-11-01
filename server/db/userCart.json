@@ -1,0 +1,30 @@
+{
+    "amount": 0,
+    "countGoods": 0,
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": "2",
+            "image": "../images/item2.jpg",
+            "title": "Socks",
+            "price": 58,
+            "imgPath": "../images/item2.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": "3",
+            "image": "../images/item3.jpg",
+            "title": "Jacket",
+            "price": 46,
+            "imgPath": "../images/item3.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": "2",
+            "image": "../images/item2.jpg",
+            "title": "Socks",
+            "price": 58,
+            "imgPath": "../images/item2.jpg"
+        }
+    ]
+}
