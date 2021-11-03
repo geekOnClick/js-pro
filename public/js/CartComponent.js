@@ -53,21 +53,22 @@ Vue.component('cart', {
             //     })
         },
         remove(item){
-            this.$parent.getJson(`${API}/addToBasket.json`)
+                
+            this.$parent.getJson(`/api/cart`)
                 .then(data => {
-                    if (data.result === 1) {
-                        this.cartItems.splice(this.cartItems.indexOf(item), 1);
-                    }
+                    console.log(data)
+                    this.cartItems.splice(this.cartItems.indexOf(item), 1);
                 })
         },
         minusItem(item){
             this.$parent.getJson(`${API}/addToBasket.json`)
                 .then(data => {
+                    
                     if (data.result === 1) {
                         if (item.quantity > 1) {
                             item.quantity--;
                         } else {
-                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
+                            this.cartItems.splice(this.cartItems[0], 1);
                         }
                     }
                 })
