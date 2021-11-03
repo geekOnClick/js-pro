@@ -1,0 +1,14 @@
+{
+    "amount": 0,
+    "countGoods": 0,
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": "2",
+            "image": "../images/item2.jpg",
+            "title": "Socks",
+            "price": 58,
+            "imgPath": "../images/item2.jpg"
+        }
+    ]
+}

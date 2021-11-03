@@ -1,0 +1,70 @@
+// Common Button
+a.productItems__button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
+}
+.productItems__button  {
+    max-width: 219px;
+    width: 100%;
+    height: 47px;
+    border: 1px solid #FF6A6A;
+    padding: 14px 38px;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    transition: 0.5s;
+}
+.productItems__button:hover {
+    color: #ffffff;
+    background-color: #F26376;   
+}
+
+// Add to cart Product
+.productCard__addButton {
+    position: relative;
+
+    &.productCard__addButton svg{
+        position: absolute;
+        top: 13px;
+        left: 23px;
+        fill: #EF5B70;
+        transition: 0.5s;
+    }
+}
+.productCard__addButton:hover {
+    svg {
+        fill: #ffffff;
+    }
+}
+// Add to cart Item
+.productItem__addBtn {
+    max-width: 139px;
+    width: 100%;
+    height: 44px;
+    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 11px;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    transition: 0.5s;
+
+    & svg{
+        fill: #ffffff;
+        transition: 0.5s;
+    }
+}
+.productItem__addBtn:hover {
+    background-color: #EF5B70;
+    transform: scale(1.1);
+
+}
